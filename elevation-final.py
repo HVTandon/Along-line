@@ -26,6 +26,7 @@ for t in range(n1-1):
     l = geod.InverseLine(lon_lat[t][1],lon_lat[t][0],lon_lat[t+1][1], lon_lat[t+1][0])
     # l is a geodesic line.
     #l.s13 gives the distance between the 2 input coordinates i.e. coordinates in lon_lat
+    #step_size is in metres
     step_size = 5; n = int(ceil(l.s13 / step_size))
     for i in range(n + 1):
         s = min(step_size * i, l.s13)
